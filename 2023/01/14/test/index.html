@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Spring Boot概述Spring Boot概述Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来简化Spring应用的创建、运行、调试、部署等。使用Spring Boot可以做到专注于Spring应用的开发，而无需过多关注XML的配置。Spring Boot使用“习惯优于配置”的理念，简单来说，它提供了一堆依赖打包，并已经按照使用习惯解决了依赖问题。使用Spring">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo学习日记">
+<meta property="og:url" content="https://example.com/2023/01/14/test/index.html">
+<meta property="og:site_name" content="Hexo学习日记">
+<meta property="og:description" content="Spring Boot概述Spring Boot概述Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来简化Spring应用的创建、运行、调试、部署等。使用Spring Boot可以做到专注于Spring应用的开发，而无需过多关注XML的配置。Spring Boot使用“习惯优于配置”的理念，简单来说，它提供了一堆依赖打包，并已经按照使用习惯解决了依赖问题。使用Spring">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011121137447.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTIyMDY2MTc=,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011121155735.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTIyMDY2MTc=,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201011121216583.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTIyMDY2MTc=,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2023-01-14T07:21:05.114Z">
+<meta property="article:modified_time" content="2023-01-14T07:36:52.756Z">
+<meta property="article:author" content="anWhatuseless">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20201011121137447.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTIyMDY2MTc=,size_16,color_FFFFFF,t_70">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://example.com/2023/01/14/test/"/>
+
+
+
+
+
+  <title> | Hexo学习日记</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo学习日记</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            Schedule
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            Sitemap
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            Commonweal 404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://example.com/2023/01/14/test/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo学习日记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-01-14T15:21:05+08:00">
+                2023-01-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Spring-Boot概述"><a href="#Spring-Boot概述" class="headerlink" title="Spring Boot概述"></a>Spring Boot概述</h2><h3 id="Spring-Boot概述-1"><a href="#Spring-Boot概述-1" class="headerlink" title="Spring Boot概述"></a>Spring Boot概述</h3><p>Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来简化Spring应用的创建、运行、调试、部署等。使用Spring Boot可以做到专注于Spring应用的开发，而无需过多关注XML的配置。Spring Boot使用“习惯优于配置”的理念，简单来说，它提供了一堆依赖打包，并已经按照使用习惯解决了依赖问题。使用Spring Boot可以不用或者只需要很少的Spring配置就可以让企业项目快速运行起来。</p>
+<ul>
+<li>Spring Boot是开发者和Spring 本身框架的中间层，帮助开发者统筹管理应用的配置，提供基于实际开发中常见配置的默认处理（即习惯优于配置），简化应用的开发，简化应用的运维；</li>
+<li>总的来说，其目的Spring Boot就是为了对Java web 的开发进行“简化”和加“快”速度，简化开发过程中引入或启动相关Spring 功能的配置。这样带来的好处就是降低开发人员对于框架的关注点，可以把更多的精力放在自己的业务代码上。</li>
+</ul>
+<p>同时随着微服务概念的推广和实践，Spring Boot的精简理念又使其成为Java微服务开发的不二之选，也可以说，Spring Boot其实就是为了微服务而生的Java web框架。</p>
+<p>先如今，Spring Boot已经在蓬勃发展的快速应用开发领域(rapid application development)成为领导者</p>
+<span id="more"></span>
+
+
+
+<h2 id="Spring-Boot的核心功能"><a href="#Spring-Boot的核心功能" class="headerlink" title="Spring Boot的核心功能"></a>Spring Boot的核心功能</h2><blockquote>
+<ul>
+<li>1、 可独立运行的Spring项目：Spring Boot可以以jar包的形式独立运行。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>2、 内嵌的Servlet容器：Spring Boot可以选择内嵌Tomcat、Jetty或者Undertow，无须以war包形式部署项目。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>3、 简化的Maven配置：Spring提供推荐的基础 POM 文件来简化Maven 配置。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>4、 自动配置Spring：Spring Boot会根据项目依赖来自动配置Spring 框架，极大地减少项目要使用的配置。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>5、 提供生产就绪型功能：提供可以直接在生产环境中使用的功能，如性能指标、应用信息和应用健康检查。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>6、 无代码生成和xml配置：Spring Boot不生成代码。完全不需要任何xml配置即可实现Spring的所有配置。</li>
+</ul>
+</blockquote>
+<h3 id="我们的主要目标是："><a href="#我们的主要目标是：" class="headerlink" title="我们的主要目标是："></a>我们的主要目标是：</h3><ul>
+<li>为所有Spring开发提供一个更快，更广泛的入门体验。</li>
+<li>立即开始斟酌，但随着需求开始偏离默认值，快速避开</li>
+<li>提供大型项目（如嵌入式服务器，安全性，指标，运行状况检查和外部配置）通用的一系列非功能性功能。</li>
+<li>绝对不会生成代码，并且不需要XML配置。</li>
+</ul>
+<h2 id="SpringBootB的相关好处"><a href="#SpringBootB的相关好处" class="headerlink" title="SpringBootB的相关好处"></a>SpringBootB的相关好处</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">A.为什么要用SpringBoot？</span><br><span class="line"></span><br><span class="line">B.什么是SpringBoot？</span><br><span class="line"></span><br><span class="line">C.SpringBoot与SpringCloud 的区别？</span><br><span class="line"></span><br><span class="line">D.SpringBoot与SpringMVC 的区别？</span><br></pre></td></tr></table></figure>
+
+<h3 id="（一）为什么要用SpringBoot？"><a href="#（一）为什么要用SpringBoot？" class="headerlink" title="（一）为什么要用SpringBoot？"></a>（一）为什么要用SpringBoot？</h3><p>以往的项目整合起来是比较繁琐复杂的，而且存在架包冲突的问题，这时候SpringBoot应运而生了，SpringBoot也就是用来做这个的。</p>
+<h3 id="（二）什么是SpringBoot？"><a href="#（二）什么是SpringBoot？" class="headerlink" title="（二）什么是SpringBoot？"></a>（二）什么是SpringBoot？</h3><p>SpringBoot是一个快速开发的框架，能过快速整合第三方框架，他是如何快速整合的呢？其实他是的基本原来是Maven依赖关系，Maven的集成，完全采用注解化，简化XML配置，内嵌HTTP服务器（Tomcate，jetty），默认嵌入Tomcate，最终以Java应用程序进行执行。</p>
+<p>总结一下：</p>
+<ul>
+<li><p>1.SpringBoot是微服务框架（网上很多这样说的朋友，其实并不合理，后面我们总结也SpringCloud的时候在细说）</p>
+</li>
+<li><p>2.SpringBoot核心：快速整合第三方框架</p>
+</li>
+<li><p>3.SpringBoot原理：Maven依赖关系，Maven的继承，完全采用注解化，Spring3.0以后采用注解方式启动SpringMVC</p>
+</li>
+</ul>
+<h3 id="三）SpringBoot与SpringCloud-的区别？"><a href="#三）SpringBoot与SpringCloud-的区别？" class="headerlink" title="(三）SpringBoot与SpringCloud 的区别？"></a>(三）SpringBoot与SpringCloud 的区别？</h3><ul>
+<li><p>1.SpringBoot快速开发框架，快速整合第三方框架（Maven依赖关系###Maven继承），完全采用注解化，简化XML配置，最终以java应用程序进行执行。</p>
+</li>
+<li><p>2.SpringCloud一套目前完整的微服务解决框架，功能非常强大，注册中心，客户端调用工具，服务治理（负载均衡，断路器，分布式配置中心，网管，消息总线等）。</p>
+</li>
+<li><p>3.关系：微服务通讯技术Http+json（restfull）轻量级，SpringBoot Web组件默认集成SpringMVC,SpringCloud依赖于SpringBoot实现微服务，使用SpringMVC编写微服务接口。</p>
+</li>
+</ul>
+<p>总结：</p>
+<ul>
+<li>SpringCloud 微服务开发——RPC远程通讯技术，服务治理，单纯的只是集成SpringBoot实现快速开发。</li>
+</ul>
+<h3 id="（四）SpringBoot与SpringMVC-的区别？"><a href="#（四）SpringBoot与SpringMVC-的区别？" class="headerlink" title="（四）SpringBoot与SpringMVC 的区别？"></a>（四）SpringBoot与SpringMVC 的区别？</h3><p>说白了就是SpringBoot Web组件默认集成SpringMVC框架,SpringMVC3.0以后支持注解方式使用java代码启动SpringMVC。</p>
+<h2 id="为什么学习SpringBoot"><a href="#为什么学习SpringBoot" class="headerlink" title="为什么学习SpringBoot"></a>为什么学习SpringBoot</h2><h3 id="1-从官方来看"><a href="#1-从官方来看" class="headerlink" title="1.从官方来看"></a>1.从官方来看</h3><p><img src="https://img-blog.csdnimg.cn/20201011121137447.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTIyMDY2MTc=,size_16,color_FFFFFF,t_70"></p>
+<h3 id="2-从Spring的优点来看"><a href="#2-从Spring的优点来看" class="headerlink" title="2.从Spring的优点来看"></a>2.从Spring的优点来看</h3><h4 id="①良好的基因"><a href="#①良好的基因" class="headerlink" title="①良好的基因"></a>①良好的基因</h4><p><img src="https://img-blog.csdnimg.cn/20201011121155735.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTIyMDY2MTc=,size_16,color_FFFFFF,t_70"><br>因为SpringBoot是伴随着Spring 4.0而生的，boot是引导的意思，也就是它的作用其实就是在于帮助开发者快速的搭建Spring框架，因此SpringBoot继承了Spring优秀的基因，在Spring中开发更为方便快捷。<br><img src="https://img-blog.csdnimg.cn/20201011121216583.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTIyMDY2MTc=,size_16,color_FFFFFF,t_70"></p>
+<h4 id="②简化编码"><a href="#②简化编码" class="headerlink" title="②简化编码"></a>②简化编码</h4><p>比如我们要创建一个 web 项目，使用 Spring 的朋友都知道，在使用 Spring 的时候，需要在 pom 文件中添加多个依赖，而 Spring Boot 则会帮助开发着快速启动一个 web 容器，在 Spring Boot 中，我们只需要在 pom 文件中添加如下一个 starter-web 依赖即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<p>我们点击进入该依赖后可以看到，Spring Boot 这个 starter-web 已经包含了多个依赖，包括之前在 Spring 工程中需要导入的依赖，我们看一下其中的一部分，如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- .....省略其他依赖 --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-web&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;5.0.7.RELEASE&lt;/version&gt;</span><br><span class="line">    &lt;scope&gt;compile&lt;/scope&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;5.0.7.RELEASE&lt;/version&gt;</span><br><span class="line">    &lt;scope&gt;compile&lt;/scope&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<p>由此可以看出，Spring Boot 大大简化了我们的编码，我们不用一个个导入依赖，直接一个依赖即可。</p>
+<h4 id="③简化配置"><a href="#③简化配置" class="headerlink" title="③简化配置"></a>③简化配置</h4><p>Spring 虽然使Java EE轻量级框架，但由于其繁琐的配置，一度被人认为是“配置地狱”。各种XML、Annotation配置会让人眼花缭乱，而且配置多的话，如果出错了也很难找出原因。Spring Boot更多的是采用 Java Config 的方式，对 Spring 进行配置。举个例子：</p>
+<p>我新建一个类，但是我不用 @Service注解，也就是说，它是个普通的类，那么我们如何使它也成为一个 Bean 让 Spring 去管理呢？只需要@Configuration 和@Bean两个注解即可，如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class TestService &#123;</span><br><span class="line">    public String sayHello () &#123;</span><br><span class="line">        return &quot;Hello Spring Boot!&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">import org.springframework.context.annotation.Bean;</span><br><span class="line">import org.springframework.context.annotation.Configuration;</span><br><span class="line"> </span><br><span class="line">@Configuration</span><br><span class="line">public class JavaConfig &#123;</span><br><span class="line">    @Bean</span><br><span class="line">    public TestService getTestService() &#123;</span><br><span class="line">        return new TestService();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>@Configuration表示该类是个配置类，@Bean表示该方法返回一个 Bean。这样就把TestService作为 Bean 让 Spring 去管理了，在其他地方，我们如果需要使用该 Bean，和原来一样，直接使用@Resource注解注入进来即可使用，非常方便。</p>
+</blockquote>
+<blockquote>
+<p>@Resource private TestService testService;</p>
+</blockquote>
+<blockquote>
+<p>另外，部署配置方面，原来 Spring 有多个 xml 和 properties配置，在 Spring Boot 中只需要个 application.yml即可。</p>
+</blockquote>
+<h4 id="④简化部署"><a href="#④简化部署" class="headerlink" title="④简化部署"></a>④简化部署</h4><p>在使用 Spring 时，项目部署时需要我们在服务器上部署 tomcat，然后把项目打成 war 包扔到 tomcat里，在使用 Spring Boot 后，我们不需要在服务器上去部署 tomcat，因为 Spring Boot 内嵌了 tomcat，我们只需要将项目打成 jar 包，使用 java -jar xxx.jar一键式启动项目。<br>另外，也降低对运行环境的基本要求，环境变量中有JDK即可。</p>
+<h4 id="⑤简化监控"><a href="#⑤简化监控" class="headerlink" title="⑤简化监控"></a>⑤简化监控</h4><p>我们可以引入 spring-boot-start-actuator 依赖，直接使用 REST 方式来获取进程的运行期性能参数，从而达到监控的目的，比较方便。但是 Spring Boot 只是个微框架，没有提供相应的服务发现与注册的配套功能，没有外围监控集成方案，没有外围安全管理方案，所以在微服务架构中，还需要 Spring Cloud 来配合一起使用。</p>
+<h3 id="3-从未来发展趋势看"><a href="#3-从未来发展趋势看" class="headerlink" title="3.从未来发展趋势看"></a>3.从未来发展趋势看</h3><p>微服务是未来发展的趋势，项目会从传统架构慢慢转向微服务架构，因为微服务可以使不同的团队专注于更小范围的工作职责、使用独立的技术、更安全更频繁地部署。而 继承了 Spring 的优良特性，与 Spring 一脉相承，而且 支持各种REST API 的实现方式。Spring Boot 也是官方大力推荐的技术，可以看出，Spring Boot 是未来发展的一个大趋势。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2022/12/30/Linux%E6%97%A5%E8%AE%B0/" rel="next" title="Linux日记">
+                <i class="fa fa-chevron-left"></i> Linux日记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-Boot%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">Spring Boot概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring-Boot%E6%A6%82%E8%BF%B0-1"><span class="nav-number">1.1.</span> <span class="nav-text">Spring Boot概述</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-Boot%E7%9A%84%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BD"><span class="nav-number">2.</span> <span class="nav-text">Spring Boot的核心功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%91%E4%BB%AC%E7%9A%84%E4%B8%BB%E8%A6%81%E7%9B%AE%E6%A0%87%E6%98%AF%EF%BC%9A"><span class="nav-number">2.1.</span> <span class="nav-text">我们的主要目标是：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SpringBootB%E7%9A%84%E7%9B%B8%E5%85%B3%E5%A5%BD%E5%A4%84"><span class="nav-number">3.</span> <span class="nav-text">SpringBootB的相关好处</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8SpringBoot%EF%BC%9F"><span class="nav-number">3.1.</span> <span class="nav-text">（一）为什么要用SpringBoot？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E4%BB%80%E4%B9%88%E6%98%AFSpringBoot%EF%BC%9F"><span class="nav-number">3.2.</span> <span class="nav-text">（二）什么是SpringBoot？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%EF%BC%89SpringBoot%E4%B8%8ESpringCloud-%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="nav-number">3.3.</span> <span class="nav-text">(三）SpringBoot与SpringCloud 的区别？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89SpringBoot%E4%B8%8ESpringMVC-%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="nav-number">3.4.</span> <span class="nav-text">（四）SpringBoot与SpringMVC 的区别？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AD%A6%E4%B9%A0SpringBoot"><span class="nav-number">4.</span> <span class="nav-text">为什么学习SpringBoot</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%BB%8E%E5%AE%98%E6%96%B9%E6%9D%A5%E7%9C%8B"><span class="nav-number">4.1.</span> <span class="nav-text">1.从官方来看</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%BB%8ESpring%E7%9A%84%E4%BC%98%E7%82%B9%E6%9D%A5%E7%9C%8B"><span class="nav-number">4.2.</span> <span class="nav-text">2.从Spring的优点来看</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%91%A0%E8%89%AF%E5%A5%BD%E7%9A%84%E5%9F%BA%E5%9B%A0"><span class="nav-number">4.2.1.</span> <span class="nav-text">①良好的基因</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%91%A1%E7%AE%80%E5%8C%96%E7%BC%96%E7%A0%81"><span class="nav-number">4.2.2.</span> <span class="nav-text">②简化编码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%91%A2%E7%AE%80%E5%8C%96%E9%85%8D%E7%BD%AE"><span class="nav-number">4.2.3.</span> <span class="nav-text">③简化配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%91%A3%E7%AE%80%E5%8C%96%E9%83%A8%E7%BD%B2"><span class="nav-number">4.2.4.</span> <span class="nav-text">④简化部署</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%91%A4%E7%AE%80%E5%8C%96%E7%9B%91%E6%8E%A7"><span class="nav-number">4.2.5.</span> <span class="nav-text">⑤简化监控</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%BB%8E%E6%9C%AA%E6%9D%A5%E5%8F%91%E5%B1%95%E8%B6%8B%E5%8A%BF%E7%9C%8B"><span class="nav-number">4.3.</span> <span class="nav-text">3.从未来发展趋势看</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">anWhatuseless</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
